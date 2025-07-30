@@ -1,6 +1,6 @@
 body{
   background-color:#f2f2e2;
-  font-size: 16px;
+  font-size: 120%;
 }
 
 html {
@@ -11,6 +11,8 @@ html {
 .header{
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
 h1{
@@ -28,6 +30,7 @@ h3{
   display: flex;
   align-items: center;
   gap: 50px;
+  flex-wrap: wrap;
 }
 
 .h-three a {
@@ -58,17 +61,27 @@ h3{
   text-align: center;
 }
 
+.myself {
+  width: 90%;
+  border-radius: 15%;
+  object-fit: cover;
+  border-right: 4px solid #ccc;
+  max-width: 300px;
+}
 
-.left {
+
+.middle {
   background-color: #fdfcf9;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  padding-right: 90px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   border-right: 2px solid #ccc;
+  width: 90%;
+  max-width: 600px;
 }
 
 .summary {
@@ -77,21 +90,12 @@ h3{
   font-style: normal;
   max-width: 600px;
   line-height: 1.6;
+  width: 90%;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
 }
 
-.middle{
-  
-}
-
-.myself {
-  width: 50%;
-  border-radius: 15%;
-  object-fit: cover;
-  border-right: 4px solid #ccc;
-}
 
 .right{
   display: flex;
@@ -126,7 +130,6 @@ h3{
 
 .contact img {
   height:40px;
-  border: 2px;
   border-radius: 5px;
 }
 
@@ -141,7 +144,9 @@ h3{
 }
 
 .vm{
-  color:#5a3c01ce;
+  color: #5a3c01ce;
+  font-weight: 700;
+  font-size: 36px;
 }
 
 .vision{
@@ -150,6 +155,7 @@ h3{
   font-style: normal;
   max-width: 600px;
   line-height: 1.6;
+  width: 90%;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -161,6 +167,7 @@ h3{
   font-style: normal;
   max-width: 600px;
   line-height: 1.6;
+  width:90%;
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
@@ -239,4 +246,57 @@ p.ach {
   flex-wrap: wrap;
   margin-top: 50px;
   background-color: rgb(252, 234, 207);
+}
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .h-three {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .myself {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  .middle,
+  .summary,
+  .vision,
+  .mission {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .services,
+  .ach {
+    font-size: 40px;
+  }
+
+  .our,
+  .my,
+  .vm {
+    font-size: 24px;
+  }
+
+  .section1,
+  .section2,
+  .section3,
+  .section4,
+  .section5 {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+  }
+
 }
